@@ -9,7 +9,7 @@
 int main(void)
 {
 	/*String initialization*/
-	char message[] = "\"Programming is like building a multilingual puzzle\n";
+	char message[] = "\"Programming is like building a multilingual puzzle";
 
 	puts(message);
 

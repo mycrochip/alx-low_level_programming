@@ -16,7 +16,7 @@ int main(void)
 		for (; tens2 <= 9; tens2++)
 		{
 
-			for (unit1 = 1; unit1 <= 9; unit1++)
+			for (unit1 = 0; unit1 <= 9; unit1++)
 			{
 				/* unit2 is dependent on unit1 as such */
 				unit2 = unit1 + 1;

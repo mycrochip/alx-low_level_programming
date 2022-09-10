@@ -30,7 +30,7 @@ int main(void)
 		if (last_digit > 5)
 			strcat(message, "and is greater than 5");
 		else /* Definitely less than or equal to 5 */
-			strcat(message, "and is less then 6 and not 0");
+			strcat(message, "and is less than 6 and not 0");
 	}
 
 	printf("Last digit of %d is %d %s\n", n, last_digit, message);

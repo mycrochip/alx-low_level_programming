@@ -17,7 +17,7 @@ int main(void)
 	/* your code goes there */
 	char last_digit;
 
-	char[50] message;
+	char message[50];
 
 	last_digit = n % 10;
 

@@ -17,18 +17,18 @@ int main(void)
 	/* your code goes there */
 	char last_digit;
 
-	char message[50];
+	char message[30] = "";
 
 	last_digit = n % 10;
 
 	if (last_digit == 0)
-		message = "and is 0";
+		strcat(message, "and is 0");
 	else
 	{
 		if (last_digit > 5)
-			message = "and is greater than 5";
+			strcat(message, "and is greater than 5");
 		else /* Definitely less than or equal to 5 */
-			message = "and is less then 6 and not 0";
+			strcat(message, "and is less then 6 and not 0");
 	}
 
 	printf("Last digit of %d is %c %s\n", n, last_digit, message);

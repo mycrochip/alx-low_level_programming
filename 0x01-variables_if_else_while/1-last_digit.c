@@ -13,7 +13,8 @@ int main(void)
 {
 	int n;
 
-	char last_digit;
+	/* My declarations */
+	int last_digit;
 
 	char message[30] = "";
 
@@ -32,6 +33,6 @@ int main(void)
 			strcat(message, "and is less then 6 and not 0");
 	}
 
-	printf("Last digit of %d is %c %s\n", n, last_digit, message);
+	printf("Last digit of %d is %d %s\n", n, last_digit, message);
 	return (0);
 }

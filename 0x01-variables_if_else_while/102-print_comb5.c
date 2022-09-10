@@ -13,14 +13,14 @@ int main(void)
 	{
 		/* tens2 is dependent on tens1 as such */
 		tens2 = tens1;
-		for (tens2; tens2 <= 9; tens2++)
+		for (; tens2 <= 9; tens2++)
 		{
 
 			for (unit1 = 1; unit1 <= 9; unit1++)
 			{
 				/* unit2 is dependent on unit1 as such */
 				unit2 = unit1 + 1;
-				for (unit2; unit2 <= 9; unit2++)
+				for (; unit2 <= 9; unit2++)
 				{
 					putchar(tens1 + '0');
 					putchar(unit1 + '0');

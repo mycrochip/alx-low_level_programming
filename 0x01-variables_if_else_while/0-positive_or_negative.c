@@ -10,6 +10,6 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	printf("%d is %c", n, (n < 0) ? "negative" : "positive");
+	printf("%d is %s", n, (n < 0) ? "negative" : "positive");
 	return (0);
 }

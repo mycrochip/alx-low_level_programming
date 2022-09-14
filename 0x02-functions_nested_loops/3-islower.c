@@ -16,7 +16,10 @@ int _islower(int c)
 
 	for (x = 'a'; x <= 'z'; x++)
 		if (c == x)
+		{
 			lower = 1;
+			break;
+		}
 
 	return (lower);
 }

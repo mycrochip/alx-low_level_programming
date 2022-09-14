@@ -3,6 +3,8 @@
 
 void print(char *strng);
 
+void print_alphabeet(void);
+
 /**
  * print - used to output an array of char
  *
@@ -14,9 +16,22 @@ void print(char *strng)
 
 	char_len = strlen(strng);
 	for (i = 0; i < char_len; i++)
-	{
 		putchar(strng[i]);
-	}
+	putchar('\n');
+
+	return;
+}
+
+/**
+ * print_alphabet - used to output alphabets in lowercase
+ *
+ *Return: void
+ */
+void print_alphabet(void)
+{
+	char c;
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
 	putchar('\n');
 
 	return;

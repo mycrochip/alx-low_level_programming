@@ -10,7 +10,12 @@ int main(void)
 {
 	char message[8] = "_putchar";
 
-	_putchar(message);
+	int char_len, i;
+
+	char_len = strlen(message);
+	for (i = 0; i < char_len; i++)
+		_putchar(message[i]);
+	_putchar('\n');
 
 	return (0);
 }

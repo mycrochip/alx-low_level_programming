@@ -10,7 +10,7 @@ int main(void)
 {
 	char message[8] = "_putchar";
 
-	print(message);
+	_putchar(message);
 
 	return (0);
 }

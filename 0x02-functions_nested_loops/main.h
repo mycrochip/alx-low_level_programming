@@ -10,7 +10,7 @@ void print_alphabeet(void);
  *
  * Return: void
  */
-void print(char *strng)
+void _putchar(char *strng)
 {
 	int char_len, i;
 

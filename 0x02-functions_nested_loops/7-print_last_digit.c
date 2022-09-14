@@ -7,19 +7,16 @@
 *
 * Return: 1 if positive, 0 otherwise.
 */
-int print_last_digit(int n)
+int print_last_digit(int r)
 {
-	int l;
+	int n;
 
-	l = n % 10;
-	if (l < 0)
-	{
-	       __putchar(-l + 48);
-	       return (-l);
-	}
+	if (r < 0)
+		n = -1 * (r % 10);
 	else
-	{
-		_putchar(l + 48);
-		return (l);
-	}
+		n = r % 10;
+
+	_putchar((n % 10) + '0');
+
+	return (n % 10);
 }

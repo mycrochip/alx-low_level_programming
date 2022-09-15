@@ -19,19 +19,48 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			printf("%d", i * j);
+			pad_to_space(i * j, 3);
 
 			/**
 			 * Used to clear the buffer and
 			 * accept the next string
 			 */
-			fflush(stdin);
+			/*fflush(stdin); */
 
 			if (j == n)
 				break;
 
-			printf(",\t");
+			_putchar(',');
+			_putchar('\t');
 		}
-		printf("\n");
+		_putchar('\n');
+	}
+}
+
+/**
+ * pad_to_space - add spaces before digit output
+ * @num: Input number to be padded
+ * @place: Input number of digit plus spaces
+ * Return: void
+ */
+void pad_to_space(int num, int place)
+{
+	if (num <= 9)
+	{
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(num + '0');
+	}
+	else if (num <= 99)
+	{
+		_putchar(' ');
+		_putchar(num / 10 + '0');
+		_putchar(num % 10 + '0');
+	}
+	else
+	{
+		_putchar(num / 100 + '0');
+		_putchar(num / 10 + '0');
+		_putchar(num % 10 + '0');
 	}
 }

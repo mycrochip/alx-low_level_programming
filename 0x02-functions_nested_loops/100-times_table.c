@@ -19,7 +19,7 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			pad_to_space(i * j, 3);
+			pad_to_place(i * j, 3);
 
 			/**
 			 * Used to clear the buffer and
@@ -42,17 +42,18 @@ void print_times_table(int n)
  * @place: Input number of digit plus spaces
  * Return: void
  */
-void pad_to_space(int num, int place)
+void pad_to_place(int num, int place)
 {
 	if (num <= 9)
 	{
-		_putchar(' ');
-		_putchar(' ');
+		for (i = 1; i < place; i++)
+			_putchar(' ');
 		_putchar(num + '0');
 	}
 	else if (num <= 99)
 	{
-		_putchar(' ');
+		for (i = 1; i < place - 1; i++)
+			_putchar(' ');
 		_putchar(num / 10 + '0');
 		_putchar(num % 10 + '0');
 	}

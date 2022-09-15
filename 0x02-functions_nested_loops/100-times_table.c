@@ -28,8 +28,7 @@ void print_times_table(int n)
 			if (j == n)
 				break;
 
-			_putchar(',');
-			_putchar('\t');
+			printf(",\t");
 		}
 		_putchar('\n');
 	}

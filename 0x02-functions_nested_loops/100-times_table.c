@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
- * print_times_table - prints n times table
+ * print_times_table - Function
+ * Description: 'Prints n times table'
  * starting with 0.
  * @n: Input variable for number of times table
  * where 0 <= n <= 15
@@ -37,13 +38,16 @@ void print_times_table(int n)
 }
 
 /**
- * pad_to_space - add spaces before digit output
+ * pad_to_space - Function
+ * Description: 'Add spaces before digit output'
  * @num: Input number to be padded
  * @place: Input number of digit plus spaces
  * Return: void
  */
 void pad_to_place(int num, int place)
 {
+	char i;
+
 	if (num <= 9)
 	{
 		for (i = 1; i < place; i++)

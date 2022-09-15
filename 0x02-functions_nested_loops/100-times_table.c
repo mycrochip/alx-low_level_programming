@@ -20,7 +20,8 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			pad_to_place(i * j, 4);
+			if (j != 0)
+				pad_to_place(i * j, 4);
 
 			/**
 			 * Used to clear the buffer and

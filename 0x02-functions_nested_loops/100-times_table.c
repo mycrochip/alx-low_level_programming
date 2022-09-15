@@ -41,7 +41,7 @@ void print_times_table(int n)
 }
 
 /**
- * pad_to_space - Function
+ * pad_to_place - Function
  * Description: 'Add spaces before digit output'
  * @num: Input number to be padded
  * @place: Input number of digit plus spaces

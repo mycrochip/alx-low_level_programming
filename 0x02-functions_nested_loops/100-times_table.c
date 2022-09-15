@@ -21,6 +21,10 @@ void print_times_table(int n)
 		{
 			printf("%d", i * j);
 
+			/* Usedto clear the buffer and \
+			   accept the next string */
+			fflush(stdin);
+
 			if (j == n)
 				break;
 

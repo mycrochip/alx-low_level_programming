@@ -20,7 +20,7 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			pad_to_place(i * j, 3);
+			pad_to_place(i * j, 4);
 
 			/**
 			 * Used to clear the buffer and
@@ -63,8 +63,10 @@ void pad_to_place(int num, int place)
 	}
 	else
 	{
+		for (i = 1; i < place - 2; i++)
+			_putchar(' ');
 		_putchar(num / 100 + '0');
-		_putchar(num / 10 + '0');
+		_putchar(num / 10 % 10 + '0');
 		_putchar(num % 10 + '0');
 	}
 }

@@ -7,16 +7,24 @@
 */
 int main(void)
 {
-	int i;
+	int i, limit;
 
-	for (i = 1; i <= 100; i++)
+	limit = 100;
+	for (i = 1; i <= limit; i++)
 	{
-		if (i % 3 == 0)
-			printf("Fizz");
-		if (i % 5 == 0)
-			printf("Buzz");
 		if (!(i % 3 == 0) && !(i % 5 == 0))
 			printf("%d", i);
+		else
+		{
+			if (i % 3 == 0)
+				printf("Fizz");
+			if (i % 5 == 0)
+				printf("Buzz");
+		}
+
+		/* Space delimiter? */
+		if (i == limit)
+			break;
 		printf(" ");
 	}
 	printf("\n");

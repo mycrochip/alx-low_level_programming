@@ -7,14 +7,14 @@
  */
 void print_triangle(int size)
 {
-	int i, j, space, hash;
+	int i, j, dot, hash;
 
 	for (i = 1; i <= size; i++)
 	{
-		space = size - i;
-		hash = size - space
-		for (j = 0; j < space; j++)
-			_putchar(' ');
+		dot = size - i;
+		hash = size - dot
+		for (j = 0; j < dot; j++)
+			_putchar('.');
 		for (j = 0; j < hash; j++)
 			_putchar('#');
 		_putchar('\n');

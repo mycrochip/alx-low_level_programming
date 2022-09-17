@@ -7,19 +7,19 @@
  */
 void print_triangle(int size)
 {
-	int i, j, space, hash;
+	int row, col, space, hash;
 
 	if (space < 1)
-		break;
+		_putchar('\n');
 	else
-		for (i = 1; i <= size; i++)
+		for (row = 1; row <= size; row++)
 		{
-			space = size - i;
-			hash = size - space
-	       		for (j = 0; j < space; j++)
-		       		_putchar(' ');
-			for (j = 0; j < hash; j++)
+			space = size - row;
+			hash = size - space;
+			for (col = 0; col < space; col++)
+				_putchar(' ');
+			for (col = 0; col < hash; col++)
 				_putchar('#');
+			_putchar('\n');
 		}
-	_putchar('\n');
 }

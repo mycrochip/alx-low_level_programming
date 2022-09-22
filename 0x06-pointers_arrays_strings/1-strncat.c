@@ -9,7 +9,7 @@
  * @n: Number of bytes of source to be used.
  * Return: dest, a pointer to the new string.
  */
-char *_strcat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i;
 	int j;

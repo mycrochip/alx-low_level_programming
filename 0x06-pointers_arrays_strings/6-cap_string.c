@@ -31,6 +31,7 @@ char *cap_string(char *str)
 				*str -= 32;
 			str++;
 		}
+	}
 
 	str = ptr;
 

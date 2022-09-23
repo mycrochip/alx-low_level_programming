@@ -26,9 +26,11 @@ char *cap_string(char *str)
 
 		}
 		else if (start)
+		{
 			if (_is_lowercase(*str))
 				*str -= 32;
-	}
+			str++;
+		}
 
 	str = ptr;
 

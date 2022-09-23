@@ -42,4 +42,6 @@ int _strcmp(char *s1, char *s2)
 		else
 			flag = 1;
 	}
+
+	return (flag);
 }

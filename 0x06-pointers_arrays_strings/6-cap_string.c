@@ -29,3 +29,8 @@ char *cap_string(char *str)
 			if (_is_lowercase(*str))
 				*str -= 32;
 	}
+
+	str = ptr;
+
+	return (str);
+}

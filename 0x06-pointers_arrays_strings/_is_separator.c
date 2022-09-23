@@ -11,7 +11,6 @@ char _is_separator(char c)
 {
 	char flag;
 
-	flag = 0;
 	switch (c)
 	{
 	case ' ':
@@ -28,7 +27,10 @@ char _is_separator(char c)
 	case '{':
 	case '}':
 		flag = 1;
+		break;
 	}
+	default:
+		flag = 0;
 
 	return (flag);
 }

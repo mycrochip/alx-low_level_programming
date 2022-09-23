@@ -1,0 +1,20 @@
+#include "main.h"
+
+/**
+ * cap_string - A function that capitalizes
+ *  all words of a string.
+ * @str: Pointer to an input string.
+ * Return: str A pointer to the new string.
+ */
+char *cap_string(char *str)
+{
+	char *ptr;
+	int i;
+
+	ptr = str;
+
+	if ((*str >= 'a') && (*str <= 'z'))
+		*str -= 32;
+
+	str++;
+	if (_is_separator(*str) && (*str >= 'a') && (*str <= 'z'))

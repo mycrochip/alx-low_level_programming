@@ -21,7 +21,7 @@ char _is_valid_separator(char c);
 
 char _is_lowercase(char c);
 
-char *cap_string(char *);
+char *cap_string(char *str);
 
 
 

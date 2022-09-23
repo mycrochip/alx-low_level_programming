@@ -17,7 +17,7 @@ void reverse_array(int *a, int n);
 
 char *string_toupper(char *);
 
-char _is_separator(char c);
+char _is_valid_separator(char c);
 
 char _is_lowercase(char c);
 

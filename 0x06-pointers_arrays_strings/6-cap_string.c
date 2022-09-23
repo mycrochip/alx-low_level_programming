@@ -9,28 +9,21 @@
 char *cap_string(char *str)
 {
 	char *ptr;
-	int start;
 
 	ptr = str;
 
-	start = 1;
 	while (*str)
 	{
-		if (_is_separator(*str))
+		if (_is_valid_separator(*str))
 		{
-			str++, start--;
+			str++;
 			if (_is_lowercase(*str))
 				*str -= 32;
 			else
 				continue;
-
 		}
-		else if (start)
-		{
-			if (_is_lowercase(*str))
-				*str -= 32;
+		else
 			str++;
-		}
 	}
 
 	str = ptr;

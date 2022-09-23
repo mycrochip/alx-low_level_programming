@@ -30,3 +30,57 @@ char *cap_string(char *str)
 
 	return (str);
 }
+
+
+/**
+ * _is_valid_separator - Checks if a word has ended
+ * given a valid char separator.
+ * @c: An input char.
+ * Return: 0 if not a valid seperator,
+ * otherwise 1.
+ */
+char _is_valid_separator(char c)
+{
+	char flag;
+
+	switch (c)
+	{
+	case ' ':
+	case '\t':
+	case '\n':
+	case ',':
+	case ';':
+	case '.':
+	case '!':
+	case '?':
+	case '"':
+	case '(':
+	case ')':
+	case '{':
+	case '}':
+		flag = 1;
+		break;
+	default:
+		flag = 0;
+	}
+
+	return (flag);
+}
+
+
+/**
+ * _is_lowercase - Checks if a character
+ *  is in lower case.
+ * @c: The input character.
+ * Return: 1 if True, else 0.
+ */
+char _is_lowercase(char c)
+{
+	char flag;
+
+	flag = 0;
+	if ((c >= 'a') && (c <= 'z'))
+		flag = 1;
+
+	return (flag);
+}

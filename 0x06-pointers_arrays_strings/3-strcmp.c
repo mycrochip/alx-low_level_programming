@@ -11,37 +11,17 @@
 int _strcmp(char *s1, char *s2)
 {
 	char *first, *second;
-	int flag;
 
 	first = s1;
 	second = s2;
 
-	while (*first)
+	while (*first && *second)
 	{
-		if (!(*second) || (*first < *second))
-		{
-			flag = -1;
-			break;
-		}
-		else if (*first > *second)
-		{
-			flag = 1;
-			break;
-		}
-		else
-			continue;
-
-		first++;
-		second++;
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		s1++;
+		s2++;
 	}
 
-	if (!(*first))
-	{
-		if (!(*second))
-			flag = 0;
-		else
-			flag = 1;
-	}
-
-	return (flag);
+	return (*s1 - *s2);
 }

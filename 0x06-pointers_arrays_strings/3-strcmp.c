@@ -17,11 +17,11 @@ int _strcmp(char *s1, char *s2)
 
 	while (*first && *second)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
+		if (*first != *second)
+			return (*first - *second);
+		first++;
+		second++;
 	}
 
-	return (*s1 - *s2);
+	return (*first - *second);
 }

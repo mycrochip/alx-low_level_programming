@@ -22,8 +22,11 @@ char *_strncpy(char *dest, char *src, int n)
 		*dest++ = *src++;
 		i++;
 	}
-
-	if (src[i] == '\0')
+/*
+ *	if (src[i] == '\0')
+ *		*dest++ = '\0';
+ */
+	for (; i < n; i++)
 		*dest++ = '\0';
 
 	dest = ptr; /* Reposition to start */

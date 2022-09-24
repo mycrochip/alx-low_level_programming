@@ -6,21 +6,19 @@
  *
  * Return: n value
  */
-char *leet(char *n)
+char *leet(char *str)
 {
-	int i, j;
-	char s1[] = "aAeEoOtTlL";
-	char s2[] = "4433007711";
+	char c;
+	char special[] = "aAeEoOtTlL";
+	char code[] = "4433007711";
 
-	for (i = 0; n[i] != '\0'; i++)
+	while (*str != '\0')
 	{
-		for (j = 0; j < 10; j++)
-		{
-			if (n[i] == s1[j])
-			{
-				n[i] = s2[j];
-			}
-		}
+		for (c = 0; c <= 9; c++)
+			if (*str == special[c])
+				*str = code[c];
+		str++;
 	}
-	return (n);
+
+	return (str);
 }

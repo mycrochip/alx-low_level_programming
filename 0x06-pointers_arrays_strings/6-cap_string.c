@@ -12,10 +12,6 @@ char *cap_string(char *str)
 
 	ptr = str;
 
-	if (_is_lowercse(*str))
-		*str -= 32;
-
-	str++;
 	while (*str)
 	{
 		if (_is_valid_separator(*str))

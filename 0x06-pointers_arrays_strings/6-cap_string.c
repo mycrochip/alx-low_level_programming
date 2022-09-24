@@ -12,6 +12,9 @@ char *cap_string(char *str)
 
 	ptr = str;
 
+	if (_is_lowercase(str[0]))
+		str[0] -= 32;
+
 	while (*str)
 	{
 		if (_is_valid_separator(*str))

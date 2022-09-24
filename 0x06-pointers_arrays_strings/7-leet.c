@@ -8,7 +8,6 @@
  */
 char *leet(char *str)
 {
-	char c;
 	char *special = "aAeEoOtTlL";
 	char *code = "4433007711";
 

@@ -12,6 +12,10 @@ char *cap_string(char *str)
 
 	ptr = str;
 
+	if (_is_lowercse(*str))
+		*str -= 32;
+
+	str++;
 	while (*str)
 	{
 		if (_is_valid_separator(*str))
@@ -36,8 +40,7 @@ char *cap_string(char *str)
  * _is_valid_separator - Checks if a word has ended
  * given a valid char separator.
  * @c: An input char.
- * Return: 0 if not a valid seperator,
- * otherwise 1.
+ * Return: 1 if valid, otherwise 0.
  */
 char _is_valid_separator(char c)
 {

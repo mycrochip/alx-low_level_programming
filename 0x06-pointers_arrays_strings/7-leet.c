@@ -24,3 +24,4 @@ char *leet(char *str)
 	str = ptr;
 
 	return (str);
+}

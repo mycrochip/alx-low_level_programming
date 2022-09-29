@@ -7,8 +7,6 @@
  */
 int is_prime_number(int n)
 {
-	float mid;
-
 	if ((n <= 1) || (_sqrt_recursion(n) >= 1))
 		return (0);
 	else

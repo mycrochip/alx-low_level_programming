@@ -7,22 +7,32 @@
  */
 int is_prime_number(int n)
 {
-	int div;
 	float mid;
 
 	if ((n <= 1) || (_sqrt_recursion(n) >= 1))
 		return (0);
+	else
+		return (check_prime(n, 2)); /* Another check for prime */
 
-	div = 2;
-	mid = n / 2.0;
-	while (div <= mid)
-	{
-		if ((n % div) == 0)
-			return (0);
-		div++;
-	}
+}
 
-	return (1); /* Can only be prime here */
+/**
+ * check_prime - Checks if a non-perfect square number
+ * is a prime number.
+ * @n: The input number.
+ * @div: A divisor.
+ * Return: 0 if num is divisible by div,
+ * otherwise 1.
+ */
+int check_prime(int n, int div)
+{
+	/* Check only halfway */
+	if (div > (n / 2.0))
+		return (1);
+	else if ((n % div) == 0)
+		return (0);
+	else
+		return (check_prime(n, div + 1));
 }
 
 /**

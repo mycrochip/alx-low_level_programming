@@ -21,6 +21,8 @@ int sqrtRecursion(int start, int end, int num);
 
 int is_prime_number(int n);
 
+int check_prime(int n, int div);
+
 
 
 #endif /* MAIN_H */

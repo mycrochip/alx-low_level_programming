@@ -1,7 +1,7 @@
 #include "main.h"
 
-int _strlen(*s);
-char *move_to_end(*s);
+int _strlen(char *s);
+char *move_to_end(char *s);
 int compare_up_to(char *ptr1, char *ptr2, int len);
 
 /**
@@ -27,7 +27,7 @@ int is_palindrome(char *s)
  * @s: A pointer to the string.
  * Return: The length of the string.
  */
-int _strlen(*s)
+int _strlen(char *s)
 {
 	if (ptr == '\0')
 		return (0);
@@ -39,7 +39,7 @@ int _strlen(*s)
  * @s: A pointer to the string.
  * Return: The pointer at the end before NULL terminator.
  */
-char *move_to_end(*s)
+char *move_to_end(char *s)
 {
 	if (*s == '\0')
 		return (s - 1);

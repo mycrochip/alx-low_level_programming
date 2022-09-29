@@ -19,7 +19,7 @@ int is_palindrome(char *s)
 	length = _strlen(s);
 	start = s;
 	end = move_to_end(s);
-	return (_compare_up_to(start, end, (length / 2)));
+	return (compare_up_to(start, end, (length / 2)));
 }
 
 /**
@@ -29,7 +29,7 @@ int is_palindrome(char *s)
  */
 int _strlen(char *s)
 {
-	if (ptr == '\0')
+	if (s == '\0')
 		return (0);
 	return (1 + _strlen(s + 1));
 }

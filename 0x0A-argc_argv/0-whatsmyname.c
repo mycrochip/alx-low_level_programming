@@ -1,7 +1,5 @@
 #include "main.h"
 
-void _print(char *ptr);
-
 /**
  * main - Entry point. Prints the name of the program.
  * @argc: The number of arguments passed to main.
@@ -14,19 +12,4 @@ int main(int argc, char *argv[])
 		_print(*argv); /* argv[0] */
 
 	return (0);
-}
-
-/**
- * _print - Prints a string to sdout.
- * @ptr: A pointer to the string.
- * Return: Nothing.
- */
-void _print(char *ptr)
-{
-	while (*ptr)
-	{
-		_putchar(*ptr);
-		ptr++;
-	}
-	_putchar('\n');
 }

@@ -32,7 +32,6 @@ void _printn(int *ptr)
 {
 	int val, place;
 	int num;
-	char c;
 
 	/* Find the place value */
 	val = *ptr;

@@ -1,4 +1,4 @@
-#include "mani.h"
+#include "main.h"
 #include <stdlib.h>
 
 void _prints(char *ptr);
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	b = atoi(argv[2]);
 	result = a * b;
 
-	_printn(result);
+	_printn(&result);
 	return (0);
 }
 

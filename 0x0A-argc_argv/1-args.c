@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point. Prints the number of arguments
@@ -9,11 +10,11 @@
  */
 int main(int argc, char *argv[])
 {
-	int count, *ptr;
+	int count;
 
 	count = argc - 1;
-	ptr = &count;
-	_printn(ptr);
+	if (count)
+		printf("%d\n", count);
 
 	return (0);
 }

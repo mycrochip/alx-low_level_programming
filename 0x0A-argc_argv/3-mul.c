@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 void _prints(char *ptr);
+
 void _printn(int *ptr);
 
 /**
@@ -9,14 +10,14 @@ void _printn(int *ptr);
  * @argc: arguement count
  * @argv: array of pointers to arguement strings
  * Return: result of multiplication or 1
- **/
+ */
 int main(int argc, char *argv[])
 {
 	int a, b, result;
 
 	if (argc <= 2)
 	{
-		_prints("Error\n");
+		_prints("Error");
 		return (1);
 	}
 	/* atoi convert a string to an int */

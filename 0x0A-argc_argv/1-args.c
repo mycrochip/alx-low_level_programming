@@ -1,5 +1,7 @@
 #include "main.h"
 
+void _printn(int *ptr);
+
 /**
  * main - Entry point. Prints the number of arguments
  * passed to the program.

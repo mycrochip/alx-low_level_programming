@@ -52,18 +52,31 @@ void _prints(char *ptr)
 void _printn(int *ptr)
 {
 	int val, place;
-	int num;
+	int num, absval;
+	int neg;
+
+	neg = 0;
+	val = absval = *ptr;
+	if (*ptr < 0)
+	{
+		neg = 1;
+		absval = -val;
+	}
 
 	/* Find the place value */
-	val = *ptr;
 	place = 1;
+	val = absval;
 	while (val >= 10)
 	{
 		place *= 10;
 		val /= 10;
 	}
+
 	/* Output each value from the highest */
-	val = *ptr;
+	if (neg)
+		_putchar('-');
+
+	val = absval;
 	while (place >= 1)
 	{
 		num = val / place;

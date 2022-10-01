@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	{
 		num = atoi(argv[i]);
 
-		if (!num)
+		if (num == 0)
 		{
 			_prints("Error");
 			return (1);

@@ -1,5 +1,7 @@
 #include "main.h"
 
+void _prints(char *ptr);
+
 /**
  * main - Entry point. Prints all the arguments of the program.
  * @argc: The number of arguments passed to main.

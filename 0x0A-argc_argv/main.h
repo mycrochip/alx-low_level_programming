@@ -3,7 +3,9 @@
 
 int _putchar(char c);
 
-void _print(char *ptr);
+void _prints(char *ptr);
+
+void _printn(int *ptr);
 
 
 

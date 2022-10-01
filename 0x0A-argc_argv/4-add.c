@@ -4,6 +4,7 @@
 void _prints(char *ptr);
 
 void _printn(int *ptr);
+
 /**
  * main - Adds all arguments together.
  * @argc: Argument count
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		num = atoi(argv[i]);
 
-		if (num == 0)
+		if (!num)
 		{
 			_prints("Error");
 			return (1);

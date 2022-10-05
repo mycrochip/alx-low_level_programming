@@ -22,7 +22,7 @@ char **strtow(char *str)
 	if (nwords < 1)
 		return (NULL);
 
-	array = (char **)alloc(sizeof(char *) * (nwords + 1));
+	array = (char **)malloc(sizeof(char *) * (nwords + 1));
 	if (array == NULL)
 		return (NULL);
 
@@ -32,8 +32,7 @@ char **strtow(char *str)
 		if ((*str != ' ') || (*str != '\t'))
 		{
 			wlen = 0;
-			while ((str[wlen] != ' ') || (str[wlen] != '\t') ||\
-			       (str[wlen] != '\0'))
+			while ((str[wlen] != ' ') || (str[wlen] != '\t') || (str[wlen] != '\0'))
 				wlen++;
 
 			array[i] = (char *)malloc(sizeof(char) * (wlen + 1));

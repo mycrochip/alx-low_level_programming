@@ -39,7 +39,7 @@ char **strtow(char *str)
 			if (array[i] == NULL)
 			{
 				while (--i >= 0)
-					free(array[i]);
+					free(array[--i]);
 				free(array);
 				return (NULL);
 			}

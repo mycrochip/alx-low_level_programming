@@ -22,20 +22,20 @@ char **strtow(char *str)
 	if (nwords < 1)
 		return (NULL);
 
-	array = (char **)malloc(sizeof(char *) * (nwords + 1));
+	array = malloc(sizeof(char *) * (nwords + 1));
 	if (array == NULL)
 		return (NULL);
 
 	i = 0;
 	while (i < nwords && *str != '\0')
 	{
-		if ((*str != ' ') || (*str != '\t'))
+		if (*str != ' ')
 		{
 			wlen = 0;
-			while ((str[wlen] != ' ') || (str[wlen] != '\t') || (str[wlen] != '\0'))
-				wlen++;
+			while ((str[wlen] != ' ')
+			       wlen++;
 
-			array[i] = (char *)malloc(sizeof(char) * (wlen + 1));
+			array[i] = malloc(sizeof(char) * (wlen + 1));
 			if (array[i] == NULL)
 			{
 				while (--i >= 0)
@@ -49,7 +49,7 @@ char **strtow(char *str)
 				array[i][m] = *str;
 				m++, str++;
 			}
-			array[i][m] = '\0';
+			       array[i][m] = '\0'; /* Terminate each word */
 			i++;
 		}
 		str++; /* Move to the next word */

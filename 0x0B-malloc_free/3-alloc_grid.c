@@ -16,13 +16,13 @@ int **alloc_grid(int width, int height)
 	if (width < 1 || height < 1)
 		return (NULL);
 
-	array = malloc(sizeof(int *) * height);
+	array = (int **)malloc(sizeof(int *) * height);
 	if (array == NULL)
 		return (NULL);
 
 	for (i = 0; i < height; i++)
 	{
-		array[i] = malloc(sizeof(int) * width);
+		array[i] = (int *)malloc(sizeof(int) * width);
 		if (array[i] == NULL)
 		{
 			free_array(array, height);
@@ -39,7 +39,7 @@ int **alloc_grid(int width, int height)
 /**
  * free_array - Frees the memory of a 2D array of integer
  * previously created by alloc_grid
- * @grid: Pointer to the array of integers
+ * @array: Pointer to the array of integers
  * @height: Number of rows
  * Return: nothing
  **/

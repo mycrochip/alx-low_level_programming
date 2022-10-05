@@ -32,7 +32,7 @@ char **strtow(char *str)
 		if (*str != ' ')
 		{
 			wlen = 0;
-			while ((str[wlen] != ' ')
+			while (str[wlen] != ' ')
 			       wlen++;
 
 			array[i] = malloc(sizeof(char) * (wlen + 1));

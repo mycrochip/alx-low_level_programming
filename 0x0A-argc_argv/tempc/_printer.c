@@ -37,7 +37,7 @@ void _printn(int *ptr)
 
 	/* Find the place value */
 	place = 1;
-	val = absval
+	val = absval;
 	while (val >= 10)
 	{
 		place *= 10;

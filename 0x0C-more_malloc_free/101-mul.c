@@ -1,9 +1,9 @@
-#include "main"
+#include "main.h"
 #include <stdlib.h>
 
 void _prints(char *ptr);
 
-void _printn(int *ptr);
+void _printn(long int *ptr);
 
 /**
  * main - Check the code
@@ -13,7 +13,7 @@ void _printn(int *ptr);
  */
 int main(int argc, char **argv)
 {
-	int num1, num2, result;
+	long int num1, num2, result;
 
 	if (argc != 3)
 	{
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 		num2 = atoi(argv[2]);
 		result = num1 * num2;
 
-		_printn(result);
+		_printn(&result);
 
 		return (0);
 	}
@@ -53,10 +53,10 @@ void _prints(char *ptr)
  * @ptr: A pointer to the integer.
  * Return: Nothing.
  */
-void _printn(int *ptr)
+void _printn(long int *ptr)
 {
-	int val, place;
-	int num, absval;
+	long int val, place;
+	long int num, absval;
 	int neg;
 
 	neg = 0;
@@ -69,7 +69,7 @@ void _printn(int *ptr)
 
 	/* Find the place value */
 	place = 1;
-	val = absval
+	val = absval;
 	while (val >= 10)
 	{
 		place *= 10;

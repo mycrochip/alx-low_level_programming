@@ -31,6 +31,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 
 	memory = malloc(new_size);
+	if (malloc == NULL)
+		return (NULL);
+
 	new_ptr = ptr;
 	if (new_size > old_size)
 		new_size = old_size;

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point. Prints file name.
@@ -8,8 +9,8 @@
  */
 int main(int argc, char * argv[])
 {
-	argc = argc; /* All args must be used */
-	printf("%s\n", argv[0]);
+	argc = argc, argv = argv; /* All args must be used */
+	printf("%s\n", __FILE__);
 
 	return (0);
 }

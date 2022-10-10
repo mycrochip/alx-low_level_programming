@@ -7,9 +7,8 @@
  * @argv: A pointer to an array of argument strings.
  * Return: Nothing.
  */
-int main(int argc, char * argv[])
+int main(void)
 {
-	argc = argc, argv = argv; /* All args must be used */
 	printf("%s\n", __FILE__);
 
 	return (0);

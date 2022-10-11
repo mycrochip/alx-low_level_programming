@@ -23,5 +23,5 @@ void print_dog(struct dog *d)
 	age = d->age;
 	owner = d->owner;
 
-	printf("Name: %s\nAge:%f\nOwner: %s\n", _DATTR(*name), age, _DATTR(*owner));
+	printf("Name: %s\nAge: %f\nOwner: %s\n", _DATTR(name), age, _DATTR(owner));
 }

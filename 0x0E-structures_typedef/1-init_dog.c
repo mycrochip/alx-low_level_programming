@@ -1,4 +1,4 @@
-# include "main.h"
+#include "dog.h"
 #include <stdlib.h>
 
 /**
@@ -16,6 +16,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 
 	else
 	{
+		d = malloc(sizeof(*d));
 		d->name = name;
 		d->age = age;
 		d->owner = owner;

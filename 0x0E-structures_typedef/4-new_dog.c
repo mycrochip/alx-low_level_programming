@@ -3,7 +3,7 @@
 
 #ifndef _NEW_DOG
 #define _NEW_DOG
-#define _DATTR(x) ((x) ? ((x) : NULL))
+#define _DATTR(x) ((x) ? (x) : (NULL))
 #endif /* _NEW_DOG */
 
 /**

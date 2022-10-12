@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
-
-#ifndef _NEW_DOG
-#define _NEW_DOG
-#define _DATTR(x) ((x) ? (x) : (NULL))
-#endif /* _NEW_DOG */
-
+/*
+ *#ifndef _NEW_DOG
+ *#define _NEW_DOG
+ *#define _DATTR(x) ((x) ? (x) : (NULL))
+ *#endif // _NEW_DOG
+*/
 /**
  * new_dog - Creates a new dog_t variable.
  * @name: Pointer to the varible identifier.
@@ -20,7 +20,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *cpyname, *cpyowner;
 	int len_name, len_owner, i;
 
-	if (!_DATTR(name) || !_DATTR(owner))
+	if (name == NULL || owner == NULL)
 		return (NULL);
 
 	len_name = len_owner = 0;
@@ -51,5 +51,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	a_dog->age = age;
 	a_dog->owner = cpyowner;
 
-	return (_DATTR(a_dog));
+	return (a_dog);
 }

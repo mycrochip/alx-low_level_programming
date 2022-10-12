@@ -16,13 +16,39 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *a_dog;
+	cahr *cpyname, *cpyowner;
+	int len_name, len_owner, i;
 
-	a_dog->name = _DATTR(name);
-	a_dog->age = _DATTR(age);
-	a_dog->owner = _DATTR(owner);
+	if (!_DATTR(name) || !_DATTR(owner))
+		return (NULL);
 
-	if (a_dog->name && a_dog->age && a_dog->owner)
-		return (a_dog);
+	len_name = len_owner = 0;
+	while (name[len_name++])
+		;
+	while (owner[len_owner++])
+		;
 
-	return (NULL);
+	a_dog = malloc(sizeof(dog_t));
+	if (a_dog == NULL)
+		return (NULL);
+
+	cpyname = malloc(len_name + 1);
+	if (cpyname == NULL)
+		return (NULL);
+	for (i = 0; name[i]; i++)
+		cpyname[i] = name[i];
+	cpyname[i] = '\0';
+
+	cpyowner = malloc(len_owner + 1);
+	if (cpyowner == NULL)
+		return (NULL);
+	for (i = 0; owner[i]; i++)
+		cpyowner[i] = owner[i];
+	cpyowner[i] = '\0';
+
+	a_dog->name = cpyname;
+	a_dog->age = age;
+	a_dog->owner = cpyowner;
+
+	return (_DATTR(a_dog));
 }

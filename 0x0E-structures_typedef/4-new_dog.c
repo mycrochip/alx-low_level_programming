@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 
 #ifndef _NEW_DOG
@@ -16,7 +17,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *a_dog;
-	cahr *cpyname, *cpyowner;
+	char *cpyname, *cpyowner;
 	int len_name, len_owner, i;
 
 	if (!_DATTR(name) || !_DATTR(owner))

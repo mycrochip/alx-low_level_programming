@@ -4,7 +4,7 @@
 void _main_constructor(void) __attribute__((constructor));
 
 /**
- * main_constructor - A constructor function that prints a message
+ * _main_constructor - A constructor function that prints a message
  * before main runs
  * Return: Nothing
  */

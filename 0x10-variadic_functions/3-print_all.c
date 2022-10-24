@@ -23,17 +23,17 @@ void print_all(const char * const format, ...)
 		{'c', print_c},
 		{'i', print_i},
 		{'f', print_f},
-		{'s', print_s},
-		{NULL, NULL}
+		{'s', print_s}
 	};
 	va_start(list, format);
-	i = 0;
 	sep = ""; /* Leave this as an empty "string" */
+	i = 0;
 	while ((format != NULL) && ((typ = format[i]) != '\0'))
 	{
-		while (j < 4)
+		j = 0;
+		while (j <= 3)
 		{
-			if (typ == *((fm[j]).t))
+			if (typ == (fm[j]).t)
 			{
 				fm[j].tp(list, sep);
 				sep = ", ";

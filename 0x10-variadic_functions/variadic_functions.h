@@ -18,7 +18,7 @@ void print_all(const char * const format, ...);
  */
 typedef struct typ
 {
-	char *t;
+	char t;
 	void (*tp)(va_list var, char * str);
 } typ_t;
 

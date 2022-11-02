@@ -4,8 +4,8 @@
 
 #ifndef _PRINT_LIST
 #define _PRINT_LIST
-#define _FMS(x) ( (x) ? (x) : ("(nil)") ) /* Format string */
-#define _FMI(x) ( (x) ? (x) : (0) ) /* Format integer */
+#define _FMS(x) ((x) ? (x) : ("(nil)")) /* Format string */
+#define _FMI(x) ((x) ? (x) : (0)) /* Format integer */
 #endif /* _PRINT_LIST */
 
 /**

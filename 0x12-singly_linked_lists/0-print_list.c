@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include "lists.h"
 #include <stdlib.h>
+#include "lists.h"
 
 #ifndef _PRINT_LIST
 #define _PRINT_LIST
-#define _FMT(x) ((x) ? (x) : "(nil)")
+#define _FMS(x) ( (x) ? (x) : ("(nil)") ) /* Format string */
+#define _FMI(x) ( (x) ? (x) : (0) ) /* Format integer */
 #endif /* _PRINT_LIST */
 
 /**
@@ -15,10 +16,14 @@
 size_t print_list(const list_t *h)
 {
 	size_t i;
+	char *str;
+	int len;
 
 	for (i = 0; h; i++)
 	{
-		printf("[%d] %s\n", h->len, h->_FMT(str));
+		str = _FMS(h->str);
+		len = (h->str) ? (h->len) : (0);
+		printf("[%d] %s\n", len, str);
 		h = h->next;
 	}
 	return (i);

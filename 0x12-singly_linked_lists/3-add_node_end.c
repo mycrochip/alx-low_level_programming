@@ -15,14 +15,12 @@ void *_strdup(const char *src);
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node, *current;
-	int length = 0;
 
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
 		return (NULL);
 
-	length = _strlen(str);
-	new_node->len = length;
+	new_node->len = _strlen(str);
 	new_node->str = _strdup(str);
 	new_node->next = NULL;
 	if (*head == NULL)

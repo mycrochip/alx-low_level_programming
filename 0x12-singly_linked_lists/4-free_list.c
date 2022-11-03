@@ -7,12 +7,16 @@
  */
 void free_list(list_t *head)
 {
-	if (head == NULL)
-		return;
-	free_list(head->next);
+	list_t *temp;
 
-	/*Return from recursion*/
-	free(head->str);
-	free(head->len);
+	temp = head;
+	while (head)
+	{
+		temp = head;
+		head = head->next;
+		free(temp->str);
+		free(temp->len);
+		free(temp);
+	}
 	free(head);
 }

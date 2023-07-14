@@ -16,11 +16,11 @@ int main(void)
 		for (unit1 = 0; unit1 <= 9; unit1++)
 		{
 
-			for (tens2 = tens1; tens2 <= 9; tens2++)
+			for (tens2 = 0; tens2 <= 9; tens2++)
 			{
 				/* unit2 is dependent on unit1 as such */
 				/*unit2 = unit1 + 1;*/
-				for (unit2 = unit1; unit2 <= 9; unit2++)
+				for (unit2 = 0; unit2 <= 9; unit2++)
 				{
 					if (unit1==unit2 && tens1==tens2)
 						unit2+=1;

@@ -19,7 +19,7 @@ int main(void)
 			for (; tens2 <= 9; tens2++)
 			{
 				/* unit2 is dependent on unit1 as such */
-				unit2 += unit1;
+				unit2 = unit1 + 1;
 				for (; unit2 <= 9; unit2++)
 				{
 					putchar(tens1 + '0');

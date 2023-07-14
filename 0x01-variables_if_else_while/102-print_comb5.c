@@ -20,7 +20,7 @@ int main(void)
 			{
 				/* unit2 is dependent on unit1 as such */
 				/*unit2 = unit1 + 1;*/
-				for (unit2 = unit1; unit2 <= 9; unit2++)
+				for (unit2 = 0; unit2 <= 9; unit2++)
 				{
 					if (unit1==unit2 && tens1==tens2)
 						unit2+=1;

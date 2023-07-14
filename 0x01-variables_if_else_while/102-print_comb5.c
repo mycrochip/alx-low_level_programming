@@ -22,7 +22,7 @@ int main(void)
 				/*unit2 = unit1 + 1;*/
 				for (unit2 = unit1; unit2 <= 9; unit2++)
 				{
-					if (unit1==tens1 && unit1==tens2 && unit1==unit2 && unit1==0)
+					if (unit1==unit2 && tens1=tens2)
 						unit2+=1;
 					putchar(tens1 + '0');
 					putchar(unit1 + '0');

@@ -34,7 +34,6 @@ int main(void)
 
 					putchar(' ');
 				}
-				tens2 = tens1;
 			}
 		}
 	}

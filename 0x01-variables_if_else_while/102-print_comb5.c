@@ -20,6 +20,8 @@ int main(void)
 			{
 				/* unit2 is dependent on unit1 as such */
 				unit2 = unit1;
+				if (unit1==unit2 && tens1==tens2)
+					unit1+=1;
 				for (; unit2 <= 9; unit2++)
 				{
 					putchar(tens1 + '0');

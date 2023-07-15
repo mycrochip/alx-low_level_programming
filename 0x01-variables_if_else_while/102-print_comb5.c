@@ -23,7 +23,6 @@ int main(void)
                         putchar(unit1 + '0');
 
                         putchar(' ');
-
                         putchar(tens2 + '0');
                         putchar(unit2 + '0');
 
@@ -35,6 +34,5 @@ int main(void)
                 }
         }
         putchar('\n');
-
         return (0);
 }

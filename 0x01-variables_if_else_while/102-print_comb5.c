@@ -27,8 +27,11 @@ int main(void)
                         putchar(tens2 + '0');
                         putchar(unit2 + '0');
 
-                        putchar(',');
-                        putchar(' ');
+                        if (digit1 + 1 != 99 && digit2 != 99)
+                        {
+                                putchar(',');
+                                putchar(' ');
+                        }
                 }
         }
         putchar('\n');

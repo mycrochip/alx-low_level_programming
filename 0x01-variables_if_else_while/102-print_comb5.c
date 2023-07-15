@@ -7,32 +7,31 @@
  */
 int main(void)
 {
-	int tens1, tens2, unit1, unit2;
+        int digit1, digit2;
+        char unit1, unit2, tens1, tens2;
 
-	for (tens1 = 0; tens1 <= 9; tens1++)
-	{
-		for (unit1 = 0; unit1 <= 9; unit1++)
-		{
-			/* tens2 is dependent on tens1 as such */
-			for (tens2 = tens1; tens2 <= 9; tens2++)
-			{
-				for (unit2=unit1+1; unit2 <= 9; unit2++)
-				{
-					putchar(tens1 + '0');
-					putchar(unit1 + '0');
+        for (digit1 = 0; digit1 <= 99; digit1++)
+        {
+                tens1 = digit1 / 10;
+                unit1 = digit1 % 10;
+                for (digit2 = digit1 + 1; digit2 <= 99; digit2++)
+                {
+                        tens2 = digit2 / 10;
+                        unit2 = digit2 % 10;
 
-					putchar(' ');
+                        putchar(tens1);
+                        putchar(unit1);
 
-					putchar(tens2 + '0');
-					putchar(unit2 + '0');
-					putchar(',');
+                        putchar(' ');
 
-					putchar(' ');
-				}
-			}
-		}
-	}
-	putchar('\n');
+                        putchar(tens2);
+                        putchar(unit2);
 
-	return (0);
+                        putchar(',');
+                        putchar(' ');
+                }
+        }
+        putchar('\n');
+
+        return (0);
 }

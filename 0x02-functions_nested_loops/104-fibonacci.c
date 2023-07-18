@@ -15,15 +15,15 @@ int main(void)
 	fibonacci[0] = 1;
 	fibonacci[1] = 2;
 
-	printf("%lu, %lu, ", fibonacci[0], fibonacci[1]);
+	printf("%llu, %llu, ", fibonacci[0], fibonacci[1]);
 
 	for (i = 2; i < 98; i++)
 	{
 		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 		if (i == 97)
-			printf("%lu\n", fibonacci[i]);
+			printf("%llu\n", fibonacci[i]);
 		else
-			printf("%lu, ", fibonacci[i]);
+			printf("%llu, ", fibonacci[i]);
 	}
 
 	return (0);

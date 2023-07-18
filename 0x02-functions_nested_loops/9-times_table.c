@@ -7,25 +7,20 @@
 */
 void times_table(void)
 {
-	int a, b, c;
+	int row, col, val;
 
-	for (a = 0; a <= 9; a++)
+	for (row = 0; row <= 9; row++)
 	{
-		_putchar(48);
-		for (b = 1; b <= 9; b++)
+		for (col = 0; col <= 9; col++)
 		{
-			c = a * b;
-			_putchar(44);
-			_putchar(32);
-			if (c <= 9)
+			val = row * col;
+			_putchar((val / 10) ? (val + 48) : '');
+			_putchar((val % 10) + 48);
+			if (col < 9)
 			{
+				_putchar(44);
 				_putchar(32);
-				_putchar(c + 48);
-			}
-			else
-			{
-				_putchar((c / 10) + 48);
-				_putchar((c % 10) + 48);
+				_putchar(32);
 			}
 		}
 	_putchar('\n');

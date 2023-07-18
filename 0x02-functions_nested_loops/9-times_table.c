@@ -7,14 +7,14 @@
 */
 void times_table(void)
 {
-	int row, col, val, pass;
+	int row, col, val;
 
 	for (row = 0; row <= 9; row++)
 	{
 		for (col = 0; col <= 9; col++)
 		{
 			val = row * col;
-			(val / 10) ? _putchar((val / 10) + 48) : pass += 1;
+			_putchar((val / 10) ? (val + 48) : 0); /* ASCII 0 = null */
 			_putchar((val % 10) + 48);
 			if (col < 9)
 			{

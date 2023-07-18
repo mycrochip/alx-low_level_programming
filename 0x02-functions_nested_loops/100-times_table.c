@@ -11,19 +11,19 @@
  */
 void print_times_table(int n)
 {
-	int i, j;
+	int row, col;
 
 	if (n < 0 || n > 15)
 		return;
 
-	for (i = 0; i <= n; i++)
+	for (row = 0; row <= n; row++)
 	{
-		for (j = 0; j <= n; j++)
+		for (col = 0; col <= n; col++)
 		{
-			if (j == 0)
+			if (col == 0)
 				_putchar('0');
 			else
-				pad_to_place(i * j, 4);
+				pad_to_place(row * col, 4);
 
 			/**
 			 * Used to clear the buffer and
@@ -31,7 +31,7 @@ void print_times_table(int n)
 			 */
 			/*fflush(stdin); */
 
-			if (j == n)
+			if (col == n)
 				break;
 
 			_putchar(',');

@@ -15,7 +15,7 @@ void times_table(void)
 		{
 			val = row * col;
 			_putchar((val / 10) ? (val + 48) : 0); /* ASCII 0 = null */
-			_putchar((val % 10) + 48);
+			_putchar((val % 10) + '0');
 			if (col < 9)
 			{
 				_putchar(44);

@@ -7,28 +7,24 @@
 */
 void print_number(int n)
 {
-	int copy, nth, size = 1, ones = n % 10;
+	int num = n, whole = 1;
+	char nth;
+	bool isneg = false;
 
-	n /= 10;
-	copy = n;
-	if (ones < 0)
+	if (num < 0)
 	{
-		ones *= -1, copy *= -1, n *= -1;
-		_putchar('-');
+		isneg = true;
+		num *= -1;
 	}
-	if (copy > 0)
+
+	while ((num / whole) > 0)
+		whole *= 10;
+
+	(isneg) ? _putchar('-') : continue;
+
+	while ((whole /= 10) > 0)
 	{
-		while (copy / 10 != 0)
-		{
-			copy /= 10, size *= 10;
-		}
-		while (size > 0)
-		{
-			nth = n / size;
-			_putchar('0' + nth);
-			n -= nth * size;
-			size /= 10;
-		}
-	}
-	_putchar('0' + ones);
+		nth = num / whole;
+		_putchar(nth + '0');
+		num -= (nth * whole);
 }

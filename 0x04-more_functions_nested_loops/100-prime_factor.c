@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 /**
-* main - entry block
-* @void: no argument
+* main - Entry point
+* 
 * Return: 0
 */
 int main(void)

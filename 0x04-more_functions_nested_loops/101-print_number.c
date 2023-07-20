@@ -1,30 +1,22 @@
 #include "main.h"
 
 /**
-* print_number - prints # using _putchar function
-* @n: the integer to print
-* Return: void
+* print_number - Prints integers using _putchar function
+* @n: The integer to print
+* Return: Nothing
 */
 void print_number(int n)
 {
-	int num = n, whole = 1;
-	char nth;
-	bool isneg = false;
+        int num = n;
 
-	if (num < 0)
-	{
-		isneg = true;
-		num *= -1;
-	}
+        if (num < 0)
+        {
+                _putchar('-');
+                num *= -1;
+        }
 
-	while ((num / whole) > 0)
-		whole *= 10;
+        if ((num / 10) > 0)
+                print_number(num / 10);
 
-	(isneg) ? _putchar('-') : continue;
-
-	while ((whole /= 10) > 0)
-	{
-		nth = num / whole;
-		_putchar(nth + '0');
-		num -= (nth * whole);
+        _putchar((num % 10) + '0');
 }

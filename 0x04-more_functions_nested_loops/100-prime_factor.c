@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 /**
 * main - entry block
 * @void: no argument
@@ -7,8 +8,9 @@
 int main(void)
 {
 	long i, number = 612852475143;
+	int limit = sqrt(number);
 
-	for (i  = 2; i <= number; i++)
+	for (i  = 2; i <= limit; i++)
 	{
 		if (number % i == 0)
 		{

@@ -25,6 +25,8 @@ char *cap_string(char *str);
 
 char *leet(char *str);
 
+char *leet(char *str);
+
 
 
 #endif /* MAIN_H */

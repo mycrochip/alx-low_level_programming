@@ -5,7 +5,7 @@
  * @str: The input string
  * Return: str A pointer to the encoded string
  */
-char *leet(char *str)
+char *rot13(char *str)
 {
 	int i, j, index;
 	char rot13a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

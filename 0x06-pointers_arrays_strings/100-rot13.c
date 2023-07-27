@@ -7,22 +7,19 @@
  */
 char *rot13(char *str)
 {
-	int i, j, index;
-	char rot13a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char rot13b[] = "abcdefghijklmnopqrstuvwxyz";
+	int i, j;
+	char rot13a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot13b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; *(str + i); i++)
 	{
-		for (j = 0; j < 26; j++)
+		for (j = 0; j < 52; j++)
 		{
-			if ((index = j - 13) < 0)
-				index += 26;
-			if (str[i] == rot13a[j])
-				str[i] = rot13a[index];
-			else if (str[i] == rot13b[j])
-				str[i] = rot13b[index];
-			else
-				continue;
+			if (*(str + i) == rot13a[j])
+			{
+				*(str + i) = rot13b[j];
+				break;
+			}
 		}
 	}
 	return (str);

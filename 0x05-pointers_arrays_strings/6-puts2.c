@@ -7,18 +7,9 @@
  */
 void puts2(char *str)
 {
-	int len = 0;
-	int l = 0;
-	char *y = str;
 	int z;
 
-	while (*y != '\0')
-	{
-		y++;
-		len++;
-	}
-	l = len - 1;
-	for (z = 0 ; z <= l ; z++)
+	for (z = 0 ; str[z]; z++)
 	{
 		if (z % 2 == 0)
 		{

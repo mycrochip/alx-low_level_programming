@@ -12,7 +12,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	int r_val;
 
 	/* check if index is between bit range */
-	r_val = (index > 8 * sizeof(*n)) ? (-1) : (1);
+	r_val = (index > 8 * sizeof(*n) - 1) ? (-1) : (1);
 	if (r_val)
 		*n = *n | (1 << index);
 

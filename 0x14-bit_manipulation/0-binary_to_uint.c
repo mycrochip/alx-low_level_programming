@@ -18,9 +18,11 @@ unsigned int binary_to_uint(const char *b)
 	if (b == NULL)
 		return (0);
 
+	/* ignore leading zeros */
 	while (*b == '0')
 		b++;
 
+	/* find binary length, and filter for invalid binary */
 	len = 0;
 	while (b[len])
 	{
@@ -29,12 +31,13 @@ unsigned int binary_to_uint(const char *b)
 		len++;
 	}
 
+	/* compute decimal value of binary */
 	base = 2;
-	num = mul = 0;
+	num = mul = 0; /* 'mul' is the key variable per index 'len' */
 	for (; len > 0; len--)
 	{
-		mul *= base;
-		if (mul == 0)
+		mul *= base; /* 'mul' increments iteratively per 'base' */
+		if (mul == 0) /* !prevent zero values! */
 			mul = 1;
 		num += (_ctoi(b[len - 1]) * mul);
 	}

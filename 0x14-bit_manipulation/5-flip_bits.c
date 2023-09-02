@@ -9,13 +9,19 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int res;
+	/* a bit of 'm' needs to be flipped if... */
+	/* ...its value is not thesame as that of 'n'... */
+	/* ...at the same position */
+	unsigned long int diff;
 	int i, num;
 
-	res = (n ^ m);
+	/* 'diff' holds the positions where m != n */
+	diff = (n ^ m);
 	num = 0;
-	for (i = 8 * sizeof(res) - 1; i >= 0; i--)
-		if ((res >> i) & 01)
+
+	/* count flips */
+	for (i = 8 * sizeof(diff) - 1; i >= 0; i--)
+		if ((diff >> i) & 01)
 			num++;
 	return (num);
 }

@@ -7,12 +7,15 @@
  */
 void print_binary(unsigned long int n)
 {
+	/* !you don't need to create bits, use system bits... */
+	/* ...don't convert values to binary explicitly! */
 	int i;
 
-	int flag; /* Check if 1 has been encountered, otherwise ignore zeros */
+	int flag; /* check if 1 has been encountered, otherwise ignore leading zeros */
 
 	if (n == 0)
 		_putchar('0');
+	/* using bit manipulation */
 	for (flag = 0, i = sizeof(n) * 8 - 1; i >= 0; i--)
 	{
 		if ((flag == 0) && ((n >> i) & 1))
